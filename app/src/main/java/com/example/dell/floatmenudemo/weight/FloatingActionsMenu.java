@@ -80,6 +80,9 @@ private  MenuStatus currentStatus = MenuStatus.STATUS_CLOSE;
                     int top = (childCount-1-i)*(DISTANCE+childHeight);
                     int right = left+childWidth;
                     int bottom = top+childHeight;
+                     //  根据坐标点在父布局中的位置 构造子控件，
+                    //  left  right  是相对于 父布局  left的margin
+                    //  top bottom  是相对于 父布局 top 的margin
                     childAt.layout(left,top,right,bottom);
                     childAt.setVisibility(View.GONE);
                     childAt.setOnClickListener(new OnClickListener() {
